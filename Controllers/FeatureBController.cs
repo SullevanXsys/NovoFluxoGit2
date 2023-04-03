@@ -6,9 +6,10 @@ namespace NovoFluxoGit.Controllers
     [Route("[controller]")]
     public class FeatureBController : ControllerBase
     {
+        private string _featureF = "FeatureF";
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "FeatureE"
+            "Freezing", "Bracing", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "FeatureE", "FeatureF"
         };
 
         private readonly ILogger<FeatureBController> _logger;
