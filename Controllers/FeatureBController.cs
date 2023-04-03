@@ -8,8 +8,8 @@ namespace NovoFluxoGit.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+            "Freezing", "Bracing", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching", "FeatureE"
+        };
 
         private readonly ILogger<FeatureBController> _logger;
 
@@ -21,11 +21,13 @@ namespace NovoFluxoGit.Controllers
         [HttpGet(Name = "FeatureB")]
         public IEnumerable<WeatherForecast> FeatureB()
         {
+            string featureE = "featureE";
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = featureE
             })
             .ToArray();
         }
